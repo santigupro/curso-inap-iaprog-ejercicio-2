@@ -12,6 +12,7 @@ Este ejercicio culmina el curso formativo aplicando técnicas de generación de 
 - Aplique la estructura mediante **código**, no manualmente con interfaz gráfica.
 - Use apoyo de un LLM o técnicas de programación asistida por IA.
 - Se ejecute desde **línea de comandos**
+- Sea una presentación del sistema de gestion de cita previa de la Junta de Andalucía, llamado "Tu Turno" ( Busca información en la web, empezando por https://desarrollo.juntadeandalucia.es/recursos/activo/gestion-citas-turnos )
 
 ---
 
@@ -34,7 +35,7 @@ Este ejercicio culmina el curso formativo aplicando técnicas de generación de 
 ## Tecnología Recomendada
 
 ### Lenguaje
-- **Pyhton** — ejecutable desde línea de comandos
+- **Python** — ejecutable desde línea de comandos
 ---
 
 ## Estructura Recomendada del Proyecto
@@ -43,5 +44,5 @@ Este ejercicio culmina el curso formativo aplicando técnicas de generación de 
 proyecto-presentacion/
 ├── README.md                 # Este archivo
 ├── src/                      # Código, a ser posible separado por cada slide
-└── output/                   # Presentaciones generadas (.pptx)
+└── output/                   # Presentaciones generadas (.odp)
 ```
