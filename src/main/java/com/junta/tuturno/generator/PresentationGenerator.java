@@ -94,13 +94,13 @@ public class PresentationGenerator {
         addTextFrame(slide, "¿Qué es Tu Turno?", "2cm", "2cm", "22cm", "2cm", 
             "36pt", "bold", "#004080", "left");
         
-        String contenido = "• Sistema digital para la gestión de citas previas en servicios " +
-                          "públicos de la Junta de Andalucía\n\n" +
-                          "• Permite a los ciudadanos solicitar, modificar y cancelar citas " +
+        String contenido = "- Sistema digital para la gestion de citas previas en servicios " +
+                          "publicos de la Junta de Andalucia\n\n" +
+                          "- Permite a los ciudadanos solicitar, modificar y cancelar citas " +
                           "desde cualquier dispositivo\n\n" +
-                          "• Integrado con múltiples servicios: empleo, sanidad, educación, etc.\n\n" +
-                          "• Disponible 24/7, eliminando limitaciones horarias\n\n" +
-                          "📱 Accesible desde web, móvil y teléfono";
+                          "- Integrado con multiples servicios: empleo, sanidad, educacion, etc.\n\n" +
+                          "- Disponible 24/7, eliminando limitaciones horarias\n\n" +
+                          "- Accesible desde web, movil y telefono";
         
         addTextFrame(slide, contenido, "2cm", "5cm", "22cm", "12cm", 
             "22pt", "normal", "#333333", "left");
@@ -116,15 +116,15 @@ public class PresentationGenerator {
         addTextFrame(slide, "Características Principales", "2cm", "2cm", "22cm", "2cm", 
             "36pt", "bold", "#004080", "left");
         
-        String contenido = "🔐 Identificación Digital\n" +
-                          "   Acceso mediante certificado digital, Cl@ve o usuario/contraseña\n\n" +
-                          "📅 Gestión Completa de Citas\n" +
-                          "   Solicitud, modificación, cancelación y consulta\n\n" +
-                          "🔔 Notificaciones Automáticas\n" +
-                          "   Recordatorios por SMS y correo electrónico\n\n" +
-                          "🏢 Multi-servicio\n" +
-                          "   Integración con diversas consejerías\n\n" +
-                          "📊 Panel de Control\n" +
+        String contenido = "Identificacion Digital\n" +
+                          "   Acceso mediante certificado digital, Cl@ve o usuario/contrasena\n\n" +
+                          "Gestion Completa de Citas\n" +
+                          "   Solicitud, modificacion, cancelacion y consulta\n\n" +
+                          "Notificaciones Automaticas\n" +
+                          "   Recordatorios por SMS y correo electronico\n\n" +
+                          "Multi-servicio\n" +
+                          "   Integracion con diversas consejerias\n\n" +
+                          "Panel de Control\n" +
                           "   Historial de citas y estado de solicitudes";
         
         addTextFrame(slide, contenido, "2cm", "5cm", "22cm", "13cm", 
@@ -142,23 +142,23 @@ public class PresentationGenerator {
             "36pt", "bold", "#004080", "left");
         
         // Columna izquierda - Ciudadanos
-        String ciudadanos = "👥 Para Ciudadanos:\n\n" +
-                           "• Ahorro de tiempo\n" +
-                           "• Flexibilidad horaria\n" +
-                           "• Reducción de esperas\n" +
-                           "• Mayor comodidad\n" +
-                           "• Mejor accesibilidad";
+        String ciudadanos = "Para Ciudadanos:\n\n" +
+                           "- Ahorro de tiempo\n" +
+                           "- Flexibilidad horaria\n" +
+                           "- Reduccion de esperas\n" +
+                           "- Mayor comodidad\n" +
+                           "- Mejor accesibilidad";
         
         addTextFrame(slide, ciudadanos, "2cm", "5cm", "10cm", "12cm", 
             "20pt", "normal", "#333333", "left");
         
-        // Columna derecha - Administración
-        String administracion = "🏛️ Para Administración:\n\n" +
-                               "• Optimización de recursos\n" +
-                               "• Mejor planificación\n" +
-                               "• Reducción de costes\n" +
-                               "• Estadísticas en tiempo real\n" +
-                               "• Mayor eficiencia";
+        // Columna derecha - Administracion
+        String administracion = "Para Administracion:\n\n" +
+                               "- Optimizacion de recursos\n" +
+                               "- Mejor planificacion\n" +
+                               "- Reduccion de costes\n" +
+                               "- Estadisticas en tiempo real\n" +
+                               "- Mayor eficiencia";
         
         addTextFrame(slide, administracion, "13cm", "5cm", "11cm", "12cm", 
             "20pt", "normal", "#333333", "left");
@@ -175,15 +175,15 @@ public class PresentationGenerator {
             "36pt", "bold", "#004080", "left");
         
         String contenido = "PASO 1: Acceso al Sistema\n" +
-                          "El ciudadano accede a través del portal web o app móvil\n\n" +
-                          "PASO 2: Identificación\n" +
+                          "El ciudadano accede a traves del portal web o app movil\n\n" +
+                          "PASO 2: Identificacion\n" +
                           "Se identifica mediante certificado digital, Cl@ve o credenciales\n\n" +
-                          "PASO 3: Selección de Servicio\n" +
-                          "Elige la consejería, oficina y tipo de trámite\n\n" +
-                          "PASO 4: Elección de Fecha y Hora\n" +
+                          "PASO 3: Seleccion de Servicio\n" +
+                          "Elige la consejeria, oficina y tipo de tramite\n\n" +
+                          "PASO 4: Eleccion de Fecha y Hora\n" +
                           "Visualiza disponibilidad y selecciona el momento conveniente\n\n" +
-                          "PASO 5: Confirmación\n" +
-                          "Recibe confirmación inmediata y recordatorio antes de la cita";
+                          "PASO 5: Confirmacion\n" +
+                          "Recibe confirmacion inmediata y recordatorio antes de la cita";
         
         addTextFrame(slide, contenido, "2cm", "5cm", "22cm", "13cm", 
             "18pt", "normal", "#333333", "left");
@@ -199,15 +199,15 @@ public class PresentationGenerator {
         addTextFrame(slide, "Impacto y Estadísticas", "2cm", "2cm", "22cm", "2cm", 
             "36pt", "bold", "#004080", "left");
         
-        String contenido = "📈 Millones de citas gestionadas anualmente\n" +
+        String contenido = "Millones de citas gestionadas anualmente\n" +
                           "   El sistema procesa un volumen creciente de solicitudes\n\n" +
-                          "⭐ 85% de satisfacción ciudadana\n" +
-                          "   Alto nivel de aceptación y valoración positiva\n\n" +
-                          "⏱️ 40% reducción en tiempos de espera\n" +
+                          "85% de satisfaccion ciudadana\n" +
+                          "   Alto nivel de aceptacion y valoracion positiva\n\n" +
+                          "40% reduccion en tiempos de espera\n" +
                           "   Mejora significativa en la eficiencia del servicio\n\n" +
-                          "🌍 Disponible en 8 provincias\n" +
-                          "   Cobertura completa en toda Andalucía\n\n" +
-                          "📱 60% de accesos desde dispositivos móviles\n" +
+                          "Disponible en 8 provincias\n" +
+                          "   Cobertura completa en toda Andalucia\n\n" +
+                          "60% de accesos desde dispositivos moviles\n" +
                           "   Preferencia creciente por canales digitales";
         
         addTextFrame(slide, contenido, "2cm", "5cm", "22cm", "13cm", 
@@ -224,23 +224,23 @@ public class PresentationGenerator {
         addTextFrame(slide, "Conclusiones", "2cm", "2cm", "22cm", "2cm", 
             "36pt", "bold", "#004080", "left");
         
-        String conclusiones = "✓ Tu Turno representa un avance significativo en la " +
-                             "digitalización de la Administración Pública andaluza\n\n" +
-                             "✓ Mejora sustancial en la experiencia ciudadana y " +
-                             "optimización de recursos administrativos\n\n" +
-                             "✓ Sistema escalable y adaptable a nuevos servicios " +
+        String conclusiones = "- Tu Turno representa un avance significativo en la " +
+                             "digitalizacion de la Administracion Publica andaluza\n\n" +
+                             "- Mejora sustancial en la experiencia ciudadana y " +
+                             "optimizacion de recursos administrativos\n\n" +
+                             "- Sistema escalable y adaptable a nuevos servicios " +
                              "y necesidades futuras";
         
         addTextFrame(slide, conclusiones, "2cm", "5cm", "22cm", "8cm", 
             "22pt", "normal", "#333333", "left");
         
-        String proximos = "🚀 Próximos Pasos:\n" +
-                         "Expansión a más servicios • Integración con IA • App móvil mejorada";
+        String proximos = "Proximos Pasos:\n" +
+                         "Expansion a mas servicios - Integracion con IA - App movil mejorada";
         
         addTextFrame(slide, proximos, "2cm", "14cm", "22cm", "3cm", 
             "20pt", "bold", "#006633", "left");
         
-        addTextFrame(slide, "www.juntadeandalucia.es | Teléfono: 955 062 627", 
+        addTextFrame(slide, "www.juntadeandalucia.es | Telefono: 955 062 627", 
             "2cm", "18cm", "22cm", "1.5cm", 
             "16pt", "normal", "#666666", "center");
     }
