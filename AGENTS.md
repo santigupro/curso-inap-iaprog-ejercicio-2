@@ -1,18 +1,14 @@
 # Caso Práctico 2 — Generación Automática de Presentaciones con IA
 
-**Objetivo:** Crear un script que genere automáticamente una presentación (.pptx) mediante programación asistida por IA (LLMs), sin crear diapositivas de forma manual.
+**Objetivo:** Crear un cli que genere automáticamente una presentación libreoffice (.odp).
 
 ---
 
-## Resumen del Enunciado
+## Requisitos del programa
 
-Este ejercicio culmina el curso formativo aplicando técnicas de generación de código con LLMs. Se solicita diseñar un programa o script que:
-
-- Genere **automáticamente** una presentación estructurada (formato .odp).
+- Genere **automáticamente** una presentación estructurada (formato .odp , libreoffice).
 - Aplique la estructura mediante **código**, no manualmente con interfaz gráfica.
-- Use apoyo de un LLM o técnicas de programación asistida por IA.
 - Se ejecute desde **línea de comandos**
-- Sea una presentación del sistema de gestion de cita previa de la Junta de Andalucía, llamado "Tu Turno" ( Busca información en la web, empezando por https://desarrollo.juntadeandalucia.es/recursos/activo/gestion-citas-turnos )
 
 ---
 
@@ -22,10 +18,11 @@ Este ejercicio culmina el curso formativo aplicando técnicas de generación de 
 2. **Una diapositiva con índice** — listado de secciones o contenido a seguir.
 3. **De 4 a 6 diapositivas con contenido** — tema a elección, relacionado con la Administración Pública (ej.: sistema de expedientes, cita previa, liquidación de tasas, guía de usuario, etc.).
 4. **Una diapositiva de cierre/conclusiones** — resumen y llamada a la acción.
+5.- El contenido debe tratar sobre el **'Tu Turno', sistema de gestion de cita previa de la Junta de Andalucía**
+
 
 ### Elementos de formato y estilo
 
-- Usa la plantilla proporcionada en el directorio plantilla
 - Tipografía clara y legible.
 - Títulos destacados y jerarquía visual.
 - Genera diagramas e imagenes relevantes.
@@ -35,14 +32,15 @@ Este ejercicio culmina el curso formativo aplicando técnicas de generación de 
 ## Tecnología Recomendada
 
 ### Lenguaje
-- **Python** — ejecutable desde línea de comandos
+- **Java** — ejecutable desde línea de comandos
+- **sdk de libreoffice**
 ---
 
 ## Estructura Recomendada del Proyecto
 
 ```
-proyecto-presentacion/
-├── README.md                 # Este archivo
-├── src/                      # Código, a ser posible separado por cada slide
+├── README.md                 # Instrucciones instalación y ejecución del cli
+├── AGENTS.md                 # Este archivo
+├── src/                      # Código, a ser posible separando código de cada slide
 └── output/                   # Presentaciones generadas (.odp)
 ```
