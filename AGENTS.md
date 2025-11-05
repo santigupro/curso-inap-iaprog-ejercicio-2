@@ -25,7 +25,8 @@
 
 - Tipografía clara y legible.
 - Títulos destacados y jerarquía visual.
-- Genera diagramas e imagenes relevantes.
+- Estilo profesional y atractivo.
+- Genera diagramas e imagenes relevantes sobre el contenido.
 
 ---
 
