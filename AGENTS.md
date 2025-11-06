@@ -6,9 +6,21 @@
 
 ## Requisitos del programa
 
-- Genere **automáticamente** una presentación estructurada (formato .odp , libreoffice).
+- Genere **automáticamente** una presentación estructurada (formato .odp , libreoffice) basandose en el ejemplo 'plantilla-presentacion.odp'
 - Aplique la estructura mediante **código**, no manualmente con interfaz gráfica.
 - Se ejecute desde **línea de comandos**
+
+---
+
+## Pasos para generación de la presentación
+
+1. Busca via web y genera el contenido de texto, imagen y diagramas de la presentación para las distintas diapositivas (portada, diapositivas de contenido de texto o de linea de tiempo, conclusiones)
+2. Por cada diapositiva a generar:
+    2.1. Leer la presentación de plantilla ( 'plantilla-presentacion.odp' ) y elegir la diapositiva de ejemplo a usar, p.e. portada, contenido de texto, contenido de linea de tiempo, conclusiones
+    2.2. Genera una copia esa esa diapositiva en la nueva presentación
+    2.3. Sustituye el contenido de esa diapositiva por el del tema de la presentación
+    2.4. Revisa que queden todos los estilos bien.
+3. Si lo ves necesario para siguientes pasos, actualiza AGENTS.md o README.md.
 
 ---
 
@@ -20,13 +32,6 @@
 4. **Una diapositiva de cierre/conclusiones** — resumen y llamada a la acción.
 5.- El contenido debe tratar sobre el **'Tu Turno', sistema de gestion de cita previa de la Junta de Andalucía**
 
-
-### Elementos de formato y estilo
-
-- Tipografía clara y legible.
-- Títulos destacados y jerarquía visual.
-- Estilo profesional y atractivo.
-- Genera diagramas e imagenes relevantes sobre el contenido.
 
 ---
 
@@ -40,8 +45,10 @@
 ## Estructura Recomendada del Proyecto
 
 ```
-├── README.md                 # Instrucciones instalación y ejecución del cli
-├── AGENTS.md                 # Este archivo
-├── src/                      # Código, a ser posible separando código de cada slide
-└── output/                   # Presentaciones generadas (.odp)
+├── README.md                   # Instrucciones instalación y ejecución del cli
+├── AGENTS.md                   # Este archivo
+├── plantilla-presentacion.odp  # Plantilla de referencia para ir generando la presentación
+├── ejemplo-presentacion.odp    # Ejemplo para ir generando la presentación
+├── src/                        # Código, a ser posible separando código de cada slide
+└── output/                     # Presentaciones generadas (.odp)
 ```
