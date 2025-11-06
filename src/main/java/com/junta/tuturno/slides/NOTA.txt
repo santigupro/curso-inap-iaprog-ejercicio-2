@@ -1,6 +1,0 @@
-// NOTA: Este paquete contiene clases auxiliares heredadas que no se usan actualmente.
-// La generación de la presentación se realiza completamente en:
-// com.junta.tuturno.generator.PresentationGenerator
-//
-// Estas clases se mantienen como referencia para posibles futuras mejoras
-// o como ejemplo de arquitectura modular alternativa.

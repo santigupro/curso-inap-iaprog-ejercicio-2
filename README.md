@@ -6,8 +6,8 @@ Generador automático de presentaciones en formato ODP (LibreOffice) sobre el si
 
 Este proyecto genera automáticamente una presentación profesional estructurada con:
 
-- ✅ Diapositiva de portada con título, subtítulo y fecha
-- ✅ Diapositiva de índice con listado de secciones
+- ✅ Diapositiva de portada
+- ✅ Diapositiva de índice
 - ✅ 5 diapositivas de contenido sobre Tu Turno:
   1. Introducción al sistema
   2. Características principales
@@ -20,17 +20,14 @@ Este proyecto genera automáticamente una presentación profesional estructurada
 
 ### Software necesario:
 
-1. **Java Development Kit (JDK) 17 o superior**
+1. **Python 3.8 o superior**
    ```bash
-   java -version
+   python3 --version
    ```
 
-2. **Maven** (OPCIONAL - el proyecto incluye Maven Wrapper)
-   - ✅ **Recomendado**: Usar Maven Wrapper incluido (no requiere instalación)
-   - El proyecto incluye `mvnw` (Maven Wrapper) que descarga Maven automáticamente
-   - Si prefieres instalar Maven globalmente:
+2. **pip** (gestor de paquetes de Python)
    ```bash
-   mvn -version
+   pip3 --version
    ```
 
 3. **LibreOffice** (para visualizar la presentación generada)
@@ -47,235 +44,110 @@ Este proyecto genera automáticamente una presentación profesional estructurada
 
 ## 📦 Instalación
 
-### Opción A: Usando Maven Wrapper (Recomendado - No requiere instalar Maven)
-
-**¡Sin instalación previa!** El proyecto incluye Maven Wrapper que descarga Maven automáticamente.
-
-#### 1. Clonar o descargar el proyecto
+### 1. Clonar o descargar el proyecto
 
 ```bash
 cd /home/ssg/workspaces/git/curso-inap-iaprog-ejercicio-2
 ```
 
-#### 2. Compilar y ejecutar en un solo paso
+### 2. Crear entorno virtual (opcional pero recomendado)
 
 ```bash
-./build-and-run.sh
+python3 -m venv venv
+source venv/bin/activate  # En Linux/Mac
+# venv\Scripts\activate   # En Windows
 ```
 
-O compilar manualmente:
+### 3. Instalar python3-venv (si no está instalado)
 
 ```bash
-./mvnw clean package
+sudo apt install python3-venv
 ```
 
----
-
-### Opción B: Usando Maven instalado globalmente
-
-#### 0. Instalar Maven (si no está instalado)
-
-**Script Automático:**
-```bash
-./install-maven.sh
-```
-
-**Manual:**
-```bash
-# Ubuntu/Debian
-sudo apt install maven
-
-# Fedora/RHEL
-sudo dnf install maven
-
-# Arch Linux
-sudo pacman -S maven
-```
-
-Ver más detalles en `INSTALACION.md`
-
-#### 1. Clonar o descargar el proyecto
+### 4. Instalar dependencias
 
 ```bash
-cd /home/ssg/workspaces/git/curso-inap-iaprog-ejercicio-2
+pip3 install -r requirements.txt
 ```
 
-#### 2. Compilar el proyecto
+**Nota:** Si tienes problemas con `externally-managed-environment`, usa un entorno virtual (recomendado):
 
 ```bash
-mvn clean compile
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
 ```
-
-#### 3. Empaquetar el proyecto (crear JAR ejecutable)
-
-```bash
-mvn clean package
-```
-
-Esto creará dos archivos JAR en el directorio `target/`:
-- `tuturno-presentation-1.0.0.jar` - JAR básico
-- `tuturno-presentation-1.0.0-jar-with-dependencies.jar` - JAR con todas las dependencias incluidas (recomendado)
 
 ## 🎯 Ejecución
 
-### ⚡ Forma más rápida (TODO EN UNO - con Maven Wrapper)
-
-```bash
-./build-and-run.sh
-```
-
-Este script compila el proyecto (si es necesario) y ejecuta el generador automáticamente.
-
----
-
-### Otras opciones de ejecución:
-
-#### Opción 1: Script de ejecución (compila si es necesario)
+### Opción 1: Usando el script automatizado (recomendado)
 
 ```bash
 ./run.sh
 ```
 
-#### Opción 2: Ejecutar con Maven Wrapper
+Este script:
+- Crea automáticamente un entorno virtual si no existe
+- Instala las dependencias necesarias
+- Ejecuta el generador de presentaciones
+
+### Opción 2: Ejecución manual
 
 ```bash
-./mvnw exec:java -Dexec.mainClass="com.junta.tuturno.Main"
+python3 src/main.py
 ```
 
-#### Opción 3: Ejecutar con Maven instalado
+La presentación generada se guardará en el directorio `output/` con el nombre `presentacion-tuturno.odp`.
+
+### Visualizar la presentación
+
+#### Opción 1: Usando el script
 
 ```bash
-mvn exec:java -Dexec.mainClass="com.junta.tuturno.Main"
+./open-presentation.sh
 ```
 
-#### Opción 4: Ejecutar el JAR directamente
+#### Opción 2: Manualmente
 
 ```bash
-java -jar target/tuturno-presentation-1.0.0-jar-with-dependencies.jar
+libreoffice output/presentacion-tuturno.odp
 ```
 
-## 📂 Estructura del Proyecto
+## 📁 Estructura del Proyecto
 
 ```
-.
-├── AGENTS.md                           # Especificaciones del ejercicio
-├── README.md                           # Este archivo
-├── pom.xml                             # Configuración Maven
-├── src/
-│   └── main/
-│       └── java/
-│           └── com/
-│               └── junta/
-│                   └── tuturno/
-│                       ├── Main.java                      # Punto de entrada CLI
-│                       ├── generator/
-│                       │   └── PresentationGenerator.java # Generador principal
-│                       └── slides/                        # Clases de diapositivas (legacy)
-│                           ├── PortadaSlide.java
-│                           ├── IndiceSlide.java
-│                           ├── ContenidoSlides.java
-│                           └── ConclusionesSlide.java
-└── output/
-    └── TuTurno_Presentacion.odp       # Presentación generada
+├── README.md                      # Este archivo
+├── AGENTS.md                      # Instrucciones para agentes IA
+├── requirements.txt               # Dependencias Python
+├── plantilla-presentacion.odp     # Plantilla ODP de referencia
+├── src/                           # Código fuente Python
+│   ├── main.py                    # Script principal CLI
+│   ├── presentation_generator.py  # Lógica de generación de presentación
+│   ├── content_generator.py       # Generación de contenido
+│   └── slides/                    # Módulos por tipo de diapositiva
+│       ├── __init__.py
+│       ├── cover_slide.py         # Diapositiva de portada
+│       ├── index_slide.py         # Diapositiva de índice
+│       ├── content_slide.py       # Diapositivas de contenido
+│       ├── timeline_slide.py      # Diapositiva de línea de tiempo
+│       └── conclusion_slide.py    # Diapositiva de conclusiones
+└── output/                        # Presentaciones generadas
 ```
 
-## 📊 Salida
+## 🔧 Tecnologías Utilizadas
 
-El programa genera un archivo `.odp` en el directorio `output/` con el nombre:
-
-```
-output/TuTurno_Presentacion.odp
-```
-
-## 👁️ Visualizar la Presentación
-
-### Opción 1: LibreOffice Impress
-
-```bash
-libreoffice --impress output/TuTurno_Presentacion.odp
-```
-
-### Opción 2: Abrir directamente desde el gestor de archivos
-
-Doble clic en el archivo `output/TuTurno_Presentacion.odp`
-
-## 🛠️ Tecnologías Utilizadas
-
-- **Java 17**: Lenguaje de programación
-- **Maven**: Gestión de dependencias y construcción
-- **ODFDOM 0.10.0**: Librería para manipulación de documentos ODF (Open Document Format)
-- **LibreOffice SDK 7.4.0**: SDK oficial de LibreOffice
-
-## 🔧 Desarrollo
-
-### Compilar sin ejecutar tests
-
-```bash
-mvn clean compile -DskipTests
-```
-
-### Limpiar archivos generados
-
-```bash
-mvn clean
-rm -rf output/*.odp
-```
-
-### Regenerar la presentación
-
-Simplemente ejecuta nuevamente el programa. El archivo en `output/` será sobrescrito.
-
-## ❗ Solución de Problemas
-
-### Error: "JAVA_HOME no está definido"
-
-```bash
-export JAVA_HOME=/usr/lib/jvm/java-17-openjdk
-export PATH=$JAVA_HOME/bin:$PATH
-```
-
-### Error al compilar: "Cannot find symbol"
-
-Asegúrate de tener todas las dependencias:
-
-```bash
-mvn dependency:resolve
-mvn clean install
-```
-
-### Error: "OutOfMemoryError"
-
-Aumenta la memoria de la JVM:
-
-```bash
-export MAVEN_OPTS="-Xmx1024m"
-mvn clean package
-```
-
-### La presentación no se abre en LibreOffice
-
-Verifica que LibreOffice esté instalado:
-
-```bash
-which libreoffice
-libreoffice --version
-```
+- **Python 3.8+** - Lenguaje de programación
+- **odfpy** - Manipulación de archivos ODP (OpenDocument Presentation)
+- **Pillow** - Procesamiento de imágenes (opcional)
+- **requests** - Obtención de contenido web (opcional)
 
 ## 📝 Notas
 
-- El contenido sobre "Tu Turno" está basado en características comunes de sistemas de cita previa en administraciones públicas
-- Los datos estadísticos son ilustrativos y orientativos
-- La presentación utiliza la tipografía y colores estándar de LibreOffice
-- Formato profesional y estructura clara para presentaciones institucionales
+- La plantilla `plantilla-presentacion.odp` contiene ejemplos de cada tipo de diapositiva
+- El script genera automáticamente el contenido sobre el sistema "Tu Turno"
+- Se puede personalizar el contenido modificando los archivos en `src/slides/`
 
-## 👨‍💻 Autor
+## 🤝 Contribución
 
-Proyecto desarrollado para el curso INAP sobre programación con IA.
-
-## 📄 Licencia
-
-Este proyecto es de carácter educativo.
-
----
-
-**¿Preguntas o problemas?** Abre un issue en el repositorio del proyecto.
+Este es un proyecto educativo del curso INAP de IA Programming.
+```

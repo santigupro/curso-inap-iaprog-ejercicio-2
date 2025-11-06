@@ -14,13 +14,20 @@
 
 ## Pasos para generación de la presentación
 
-1. Busca via web y genera el contenido de texto, imagen y diagramas de la presentación para las distintas diapositivas (portada, diapositivas de contenido de texto o de linea de tiempo, conclusiones)
-2. Por cada diapositiva a generar:
-    2.1. Leer la presentación de plantilla ( 'plantilla-presentacion.odp' ) y elegir la diapositiva de ejemplo a usar, p.e. portada, contenido de texto, contenido de linea de tiempo, conclusiones
-    2.2. Genera una copia esa esa diapositiva en la nueva presentación
-    2.3. Sustituye el contenido de esa diapositiva por el del tema de la presentación
-    2.4. Revisa que queden todos los estilos bien.
-3. Si lo ves necesario para siguientes pasos, actualiza AGENTS.md o README.md.
+**MUST** Estos pasos debes seguirlo cualquier agente
+
+1. Busca via web y genera el contenido de texto, imagen y diagramas de la presentación para las distintas diapositivas (portada, diapositivas de contenido de texto o de linea de tiempo, conclusiones... )
+2. Para la diapositiva que te pida generar:
+    - Cargar la presentación de plantilla ( 'plantilla-presentacion.odp' ).
+    - Cargar la diapositiva de ejemplo a usar para la generación. En la plantilla de ejemplo cada tipo de diapositiva es:
+        - pagina 1 es diapositiva de portada
+        - pagina 2 es diapositiva de indice
+        - página 3 es diapositiva de contenido de texto
+        - página 4 es diapositiva de contenido de linea de tiempo
+        - paǵina 5 es  diapositiva de conclusiones. 
+    - Genera una copia esa esa diapositiva en la nueva presentación.
+    - En la nueva diapositiva generada en la nueva presentación, sustituye el contenido de esa diapositiva por el del tema de la presentación.
+3. Si lo ves necesario para optimizar siguientes pasos, actualiza AGENTS.md o README.md.
 
 ---
 
@@ -38,8 +45,13 @@
 ## Tecnología Recomendada
 
 ### Lenguaje
-- **Java** — ejecutable desde línea de comandos
-- **sdk de libreoffice**
+- **Python 3.8+** — ejecutable desde línea de comandos
+- **Librerías:**
+  - `odfpy` — Para manipular archivos ODP (OpenDocument Presentation)
+  - `python-pptx` — Alternativa para generar presentaciones (opcional)
+  - `Pillow` — Para manejo de imágenes
+  - `requests` — Para buscar y descargar contenido web si es necesario
+
 ---
 
 ## Estructura Recomendada del Proyecto
@@ -47,8 +59,19 @@
 ```
 ├── README.md                   # Instrucciones instalación y ejecución del cli
 ├── AGENTS.md                   # Este archivo
+├── requirements.txt            # Dependencias Python
 ├── plantilla-presentacion.odp  # Plantilla de referencia para ir generando la presentación
 ├── ejemplo-presentacion.odp    # Ejemplo para ir generando la presentación
-├── src/                        # Código, a ser posible separando código de cada slide
+├── src/                        # Código Python, a ser posible separando código de cada slide
+│   ├── main.py                 # Script principal CLI
+│   ├── presentation_generator.py  # Generador de presentación
+│   ├── content_generator.py   # Generador de contenido
+│   └── slides/                 # Módulos para cada tipo de slide
+│       ├── __init__.py
+│       ├── cover_slide.py
+│       ├── index_slide.py
+│       ├── content_slide.py
+│       ├── timeline_slide.py
+│       └── conclusion_slide.py
 └── output/                     # Presentaciones generadas (.odp)
 ```

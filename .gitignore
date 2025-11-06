@@ -1,20 +1,17 @@
-# Archivos compilados de Java
-*.class
-*.jar
-!target/tuturno-presentation-*.jar
-
-# Directorios de Maven
-target/
-pom.xml.tag
-pom.xml.releaseBackup
-pom.xml.versionsBackup
-pom.xml.next
-release.properties
-dependency-reduced-pom.xml
-buildNumber.properties
-.mvn/timing.properties
-# Mantener maven-wrapper.jar y maven-wrapper.properties para Maven Wrapper
-# .mvn/wrapper/maven-wrapper.jar
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+venv/
+env/
+ENV/
+.Python
 
 # Logs
 *.log
@@ -41,7 +38,5 @@ Thumbs.db
 
 # Presentaciones generadas (excepto en output/)
 *.odp
+!plantilla-presentacion.odp
 !output/*.odp
-
-# Node modules (si se usara Node.js)
-node_modules/
